@@ -17,17 +17,22 @@ def index(request):
     params={
         'ques_list':ques_list,
     }
-
+    print("this is index")
+    print (params)
     return render(request,'polls/index.html',params)
 
 
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
+    print("detail")
+    print(question)
+    print(question.chocie_set.all)
     return render(request, 'polls/detail.html', {'question': question})
 
 
 def results(request, question_id):
+
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/result.html', {'question': question})
 
