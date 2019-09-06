@@ -6,12 +6,12 @@
 </head>
 <body>
 
-<h1>{{ question.question_text }}</h1>
+<h1>{{ question.Question_text }}</h1>
 
 
 <ul>
 {% for choice in question.chocie_set.all %}
-    <li>{{ chocie.choice_text }} -- {{ chocie.votes }} vote{{ chocie.votes|pluralize }}</li>
+    <li>{{ choice.chocie_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
 {% endfor %}
 </ul>
 
