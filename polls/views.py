@@ -41,11 +41,14 @@ def results(request, question_id):
 
 
 def vote(request, question_id):
+    print  ("quesiton id is %s" %question_id)
     question = get_object_or_404(Question, pk=question_id)
     print  (question)
     print("vote")
     try:
-        selected_choice = question.chocie_set.get(pk=request.POST['Chocie'])
+        print("checking try")
+        selected_choice = question.chocie_set.get(pk=request.POST['chocie'])
+        print(selected_choice)
 
     except (KeyError, Chocie.DoesNotExist):
         # Redisplay the question voting form.
