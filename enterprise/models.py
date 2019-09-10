@@ -1,13 +1,5 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.contrib.auth.models import User
-
-
 from django.db import models
-
-
-# Create your models here.
+from django.contrib.auth.models import User
 
 class Address(models.Model):
     address = models.CharField(max_length=500)
@@ -22,15 +14,14 @@ class Address(models.Model):
 
 
 class Enterprise(models.Model):
-    name=models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
     address = models.ForeignKey(Address, on_delete=models.DO_NOTHING)
 
     def __str__(self):
         return self.name
 
-
-class Companies(models.Model):
-    Enterprise=models.ForeignKey(Enterprise,on_delete=models.CASCADE)
+class Company(models.Model):
+    Enterprise = models.ForeignKey(Enterprise,on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     address = models.ForeignKey(Address, on_delete=models.DO_NOTHING)
 
@@ -39,8 +30,9 @@ class Companies(models.Model):
 
 
 class Employee(models.Model):
-    Companies=models.ForeignKey(Companies,on_delete=models.CASCADE)
-    user=models.OneToOneField(User,on_delete=models.DO_NOTHING)
+    Company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    address = models.ForeignKey(Address, on_delete=models.DO_NOTHING)
 
     def __str__(self):
         return self.user.username

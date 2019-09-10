@@ -1,40 +1,56 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-from django.http import HttpResponse
-from django.shortcuts import get_object_or_404,render
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, JsonResponse
+from .models import Enterprise, Company, Employee, Address
+
+from django.core import serializers
+
+import json
 
 
-from django.shortcuts import render
-from .models import Enterprise,Companies,User,Address,Employee
-
-# Create your views here.
-
-def index(request):
-    return HttpResponse("<H1>THIS IS THE ENTRPRISE</H1> ")
-
-def getjson(request,enterprise_id):
-
-    enterp=get_object_or_404(Enterprise,pk=enterprise_id)
-
-    selected_comp=enterp.companies_set.all()
-
-    print('list is printed')
-
-    emp_list=list(selected_comp)
-
-    print('employee list')
+def get_address(address):
+    return {
+        'address': address.address,
+        'city': address.city,
+        'province': address.province,
+        'postal_code': address.postal,
+        'country': address.country,
+        'phone_no': address.phone_no,
+    }
 
 
-    #e_l=Employee.objects.filter(Companies__in=emp_list)
+def detail(request, enterprise_id):
+    enterprise = get_object_or_404(Enterprise, pk=enterprise_id)
 
-    print(selected_comp)
+    companies = Company.objects.filter(Enterprise__id=enterprise_id)
 
-    for comp in emp_list:
-        try:
-            print(comp.employee_set.all())
+    # list of dictoinaries
+    company_list = []
 
-        except:
-            print('except ran')
+    for company in companies:
+        employees = company.employee_set.all()
 
-    return HttpResponse("<H1>THIS IS THE ENTRPRISE-detail</H1> ")
+        # list of dictoinaries
+        employee_list = []
 
+        for employee in employees:
+            employee_dict = {
+                'name': employee.user.username,
+            }
+            employee_dict.update(get_address(employee.address))
+            employee_list.append(employee_dict)
+
+        company_dict = {
+            'name': company.name,
+            'employees': employee_list,
+        }
+        company_dict.update(get_address(company.address))
+        company.employees = company.employee_set.all()
+        company_list.append(company_dict)
+
+    result = {
+        'name': enterprise.name,
+        'companies': company_list,
+    }
+    result.update(get_address(enterprise.address))
+
+    return JsonResponse(result)
