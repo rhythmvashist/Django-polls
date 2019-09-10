@@ -5,8 +5,9 @@ from django.contrib import admin
 
 # Register your models here.
 
-from . models import Enterprise,Companies,Employee
+from . models import Enterprise,Companies,Employee,Address
 
 admin.site.register(Enterprise)
 admin.site.register(Companies)
 admin.site.register(Employee)
+admin.site.register(Address)

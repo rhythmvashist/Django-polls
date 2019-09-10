@@ -18,7 +18,7 @@ class Address(models.Model):
     phone_no = models.CharField(max_length=15)
 
     def __str__(self):
-        return self.name
+        return self.address
 
 
 class Enterprise(models.Model):
@@ -34,7 +34,6 @@ class Companies(models.Model):
     name = models.CharField(max_length=50)
     address = models.ForeignKey(Address, on_delete=models.DO_NOTHING)
 
-
     def __str__(self):
         return self.name
 
@@ -43,3 +42,5 @@ class Employee(models.Model):
     Companies=models.ForeignKey(Companies,on_delete=models.CASCADE)
     user=models.OneToOneField(User,on_delete=models.DO_NOTHING)
 
+    def __str__(self):
+        return self.user.username
