@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0981157-6a25-4dcc-94cb-be29ae68622d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterprise/template/enterprise/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise/template/enterprise/resultJSON.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enterprise/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/enterprise/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/polls/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
+            <state relative-caret-position="310">
               <caret line="49" column="56" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
@@ -112,14 +109,14 @@
         <option value="$PROJECT_DIR$/polls/views.py" />
         <option value="$PROJECT_DIR$/enterprise/admin.py" />
         <option value="$PROJECT_DIR$/enterprise/template/enterprise/resultJSON.html" />
-        <option value="$PROJECT_DIR$/enterprise/views.py" />
         <option value="$PROJECT_DIR$/enterprise/models.py" />
+        <option value="$PROJECT_DIR$/enterprise/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1364" />
-    <option name="y" value="63" />
+    <option name="x" value="1374" />
+    <option name="y" value="27" />
     <option name="width" value="1141" />
     <option name="height" value="1316" />
   </component>
@@ -225,21 +222,21 @@
       <option name="presentableId" value="Default" />
       <updated>1567709975123</updated>
       <workItem from="1567709977976" duration="28805000" />
-      <workItem from="1567819470506" duration="21379000" />
+      <workItem from="1567819470506" duration="23661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50184000" />
+    <option name="totallyTimeSpent" value="52466000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1364" y="63" width="1141" height="1316" extended-state="0" />
+    <frame x="1374" y="27" width="1141" height="1316" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22656961" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.27388534" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49955237" visible="true" weight="0.2982026" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49955237" weight="0.37908497" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50044763" side_tool="true" weight="0.2982026" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32929516" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32929516" />
@@ -247,9 +244,9 @@
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
       <window_info anchor="bottom" id="Run" order="8" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.39950982" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="11" visible="true" weight="0.39950982" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="right" id="Database" order="0" weight="0.3294539" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -290,12 +287,17 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/enterprise/views.py</url>
           <line>31</line>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/enterprise/views.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/enterprise/views.py</url>
           <line>33</line>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -455,16 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polls/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="56" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/sql/where.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -514,6 +506,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polls/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="49" column="56" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="512" selection-start-line="512" selection-end-line="512" />
         </state>
       </provider>
     </entry>

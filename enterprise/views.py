@@ -15,6 +15,7 @@ def index(request):
 def getjson(request,enterprise_id):
 
     enterp=get_object_or_404(Enterprise,pk=enterprise_id)
+
     selected_comp=enterp.companies_set.all()
 
     print('list is printed')
@@ -28,11 +29,12 @@ def getjson(request,enterprise_id):
 
     print(selected_comp)
 
-    for comp in selected_comp:
+    for comp in emp_list:
         try:
-            selected_emp=comp.employee_set.all()
-            print(selected_emp)
+            print(comp.employee_set.all())
+
         except:
             print('except ran')
 
     return HttpResponse("<H1>THIS IS THE ENTRPRISE-detail</H1> ")
+
