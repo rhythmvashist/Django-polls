@@ -30,9 +30,9 @@ class Company(models.Model):
 
 
 class Employee(models.Model):
-    Company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    Company = models.ForeignKey(Company, on_delete=models.CASCADE,default='')
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    address = models.ForeignKey(Address, on_delete=models.DO_NOTHING)
+    address = models.ForeignKey(Address, on_delete=models.DO_NOTHING,default='')
 
     def __str__(self):
         return self.user.username
